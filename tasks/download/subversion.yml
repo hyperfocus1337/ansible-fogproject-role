@@ -1,0 +1,10 @@
+---
+- name: install subversion
+  apt: name=subversion
+       update_cache=yes
+       state=present
+
+
+- name: download svn repository
+  subversion: repo=https://svn.code.sf.net/p/freeghost/code/tags/{{ fog_project_version }}/
+              dest=/opt/fog_{{ fog_project_version }}/

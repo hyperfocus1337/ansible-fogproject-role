@@ -1,0 +1,9 @@
+---
+- include: download/archive.yml
+  tags: dl_fog_project_archive
+
+- include: download/subversion.yml
+  tags: dl_fog_project_subversion
+
+- include: install/install.yml
+  tags: install_fog_project

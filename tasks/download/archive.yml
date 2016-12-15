@@ -1,0 +1,11 @@
+---
+- name: download fog project
+  get_url: url=http://downloads.sourceforge.net/project/freeghost/FOG/fog_{{ fog_project_version }}/fog_{{ fog_project_version }}.tar.gz
+           dest=/opt/fog_{{ fog_project_version }}.tar.gz
+           force=no
+
+
+- name: extract tar gz archive
+  unarchive: src=/opt/fog_{{ fog_project_version }}.tar.gz
+             dest=/opt
+             copy=no
